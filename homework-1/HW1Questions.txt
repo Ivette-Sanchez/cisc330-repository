@@ -1,0 +1,22 @@
+CISC 3300 SP24 
+Homework 1 
+Ivette Sanchez-Perez
+
+1. What is HTML? What does it do? 
+       HTML is a markup language that is used to create the structure of websites by defining how the layout and presentation of text/images should pop up. Its the building blocks of the page.
+
+2. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user. 
+       This webpage successfully uses structure to convey meaning and navigation options to the user by having a navigation bar at the top where when you hover over the different labels you get more specific        options relative to what you are looking for. Theres also a search button to help you search for anything you need faster instead of trying to find it on your own. The page is well organized by having        different sections with contrasting colors making it easier for users to quickly see different clickable links and other useful sections.
+ 
+3. What is an HTML element? Tag? Attribute?
+       An HTML element is different start and end tags with info/content added in between them. The element is what controls the way the content is displayed on the page.
+       An HTML tag is like the containers using <_> and </_>. Inside of these goes the element. 
+       An HTML attribute gives us more information about the elements with a name and value. 
+ 
+4. What does it mean when an element has semantic meaning? And structural meaning? 
+       When an element has semantic meaning it means they are made to convey meaning through their element type even if they look the same as other elements.--> useful for screen readers and SEOs.
+       When an element has structural meaning it means that it would have an effect on the actual structure of the page but doesn't really have any meaning by their element type. 
+
+5. What is the default behavior when submitting a HTML form? 
+       The default behavior when submitting a HTML form is to submit to the current page URL and the browser will reload the page after the form is submitted.
+
