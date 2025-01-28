@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Div with Children</title>
+    </head>
+    <body>
+
+        <div class="Parent"> 
+            <div class="Children"> Child 1 box </div>
+            <div class="Children"> Child 2 box </div>
+            <div class="Children"> Child 3 box </div>
+        </div>
+    </body>
+</html>
+
+<style>
+
+    .Parent {                         
+        text-align: center;           /*aligns my boxes in the center of page without they shift to left*/
+    }
+
+    .Children{
+        display: inline-block;        /* makes the boxes sit horizontal to eachother*/
+        width: 100px;                 /*width and height of actual box*/
+        height: 100px;                  
+        border: 1px black solid;    /*settings for line surrounding boxes*/
+        margin:5px;                   /*space between boxes*/
+    }
+</style>
