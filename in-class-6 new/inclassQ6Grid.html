@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> Ivette Sanchez In-Class 6 Grid</title>
+
+        <style> 
+            .gridContainer{
+                display: grid;
+                grid-template-rows: 100px 100px 100px 100px; 
+                grid-template-columns: 100px 100px 100px 100px; 
+            }
+
+            .gridItem1{
+                grid-row-start: 1; 
+                grid-row-end: 5;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background-color: blue;
+            }
+
+            .gridItem2{
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                background-color: green;
+            }
+
+            
+        </style>
+    </head>
+
+        <body>
+            <div class="gridContainer">
+                <div class="gridItem1"> 1 </div> 
+                <div class="gridItem2"> 2 </div>  
+            </div>
+
+        </body>
+    </html>
