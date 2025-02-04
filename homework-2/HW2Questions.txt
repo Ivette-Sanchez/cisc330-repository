@@ -1,0 +1,26 @@
+CISC 3300 SP25 
+Homework 2
+Ivette Sanchez-Perez 
+
+	1. What do the id and class attributes do? How are they alike and different? 
+		- The id attribute is used to identify that element distinctly from other elements on the page. The class attribute can be used to identify several elements as being different from the other 
+		elements on the page.
+		- A difference between the two is that, unlike the class attribute, no 2 elements can have the same value for their id attribute, while groups of elements can have the same class.
+		- The similarity between the two is that they are both used to select elements and help style.
+
+	2. What are the parts of a CSS rule? 
+		- The CSS rule has two parts, selector and declaration. The selector indicates which elements the rule is going to apply to and the declarations indicate how the elements that are selected 
+		should be styled.
+
+	3. Explain how CSS rules cascade. 
+		- If one sector is more specific than the others, this one will take precedence. If 2 selectors are identical, the latter of the two will take precedence. Lastly, if it has !important after 
+		any property value, then it is considered more important than other rules that apply to the same element. 
+
+	4. Contrast display: block, inline, inline-block. 
+		- Block elements make the elements appear on a new line. Inline makes the elements continue on the same line as their neighboring element. Inline-block elements can work as both but the 
+		difference is that in this one, you can actually set a width/height.
+
+	5. What are border, padding, and margin? 
+		- Border separates the edge of one box from another. Padding is the space between the border of a box and the content inside it. Margin is found outside the edge of the border, making it 
+		possible to create a gap between the borders of two adjacent boxes.
+

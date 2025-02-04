@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+          <title> Funkoops Collectibles </title>
+			
+			<style>
+				/*fonts from google*/
+				.new-font {
+  					font-family: "Libre Baskerville", serif;
+  					font-style: normal;
+				}
+				
+				.new-font2 {
+  					font-family: "Varela Round", serif;
+  					font-weight: 400;
+  					font-style: normal;
+				}
+				
+				.logo{
+					font-family: "Libre Baskerville";
+					color: grey;
+					background-color:bisque;
+					padding: 15px; /*padding around the actual words*/
+					text-align: center;
+				}
+
+				body{
+					font-family: "Varela Round";
+					background-color: whitesmoke;
+					padding:20px; 
+					text-align: center;
+					margin: 0;
+				}
+
+				h2{
+					color:darkslategrey
+				}
+
+				.header{ 
+					background-color: rgb(157, 153, 183);
+					text-align: center;
+					padding: 15px; /*adding space on the padding so that the content can float inside*/
+            		border-bottom: 3px solid black; /* only adds a line on the bottom border of the header to make it look nice*/
+				}
+				
+				/*this is for the actual content inside the header*/
+				.header a{
+					font-family: "Varela Round";
+					color:rgb(57, 86, 106);
+					margin: 15px;  /*adds space in between the links in the header*/
+					padding: 10px;
+					font-weight: bold;
+				}
+				.header a:hover{  /* when the mouse is over the links in the header it changes color*/
+					color:rgb(231, 230, 233)
+				}
+
+				form {
+            		width: 50%;
+					padding: 20px;
+            		background: white;
+					margin: 30px auto; /*the auto centers it while the 30px adds space on the top and bottom of te form */
+            		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+							/*  shadow is in the middle behind the form with 15px blurred.--> rgba - color is black and the 0.5 is the opacity*/
+				}
+			
+        		legend { 
+            		font-weight: bold;
+            		font-size: 18px;
+					background-color:rgb(230, 230, 230) ;
+					padding: 10px;
+					border-radius: 10px;
+					text-align: left;
+        		}
+     
+				input[type="submit"] {
+            		background-color: #5a76c1;
+            		color: white;
+            		font-size: 16px;
+            		font-weight: bold;
+					border-radius: 10px; /*curving the edges of the submit button*/
+					padding: 10px;
+                	margin-top: 10px;/*just so that its not right under the email input box-->not touching*/
+        		}
+        		input[type="submit"]:hover {
+            		background-color: #3b4474;
+					cursor: pointer;
+        		}
+
+				p, h2, figure { /*spaces everything else nicely*/
+					margin: 20px;
+					padding: 10px;
+				}
+
+			</style>
+
+			<!--the fonts i chose from google -->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+		
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+  
+
+		</head>
+        <body>
+			<div class="header">
+				<a href="#"> Home</a>
+				<a href="#"> Shop</a>
+				<a href="#"> About</a>
+				<a href="#"> Contact Us</a>
+			</div>
+
+          <h1 class="logo"> Funkoops Collectibles </h1>
+             <p> Re-selling Funko pops and figures for half the price! </p>
+             <p> All figures are certified to be in perfect conditions with photo proof. </p>           
+	  <h2> Funko Pops on Sale! </h2>	    
+	     <figure> 
+			<img src="images/Businesspop.jpg" alt="Funko Pops that are all $7.50." width="600" height="400"/>
+		   <br />
+		   <figcaption> Every pop on sale for $7.50. </figcaption>
+	     </figure>	     
+	
+	  <form action="" method="post">
+	   <fieldset>
+	     <legend>Contact Form </legend>
+	      
+	      <label for="firstname"> Enter your first name: </label> 
+	      <input type="text" id="firstname" name="first-name" required />
+	      <br />
+	      <label for="lastname"> Enter your last name: </label>
+              <input type="text" id="lastname" name="last-name" required />
+	      <br />
+	      <label for="email"> Email: </label> 
+              <input type="email" id="email" name="email" required /> 
+	      <br />	   
+	      <input type="submit" value="Submit" />
+	   </fieldset>
+	  </form>
+	 </body>
+</html>
