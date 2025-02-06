@@ -1,0 +1,10 @@
+CISC 3300 S25 
+In class assignment 6 
+Ivette Sanchez-Perez
+
+	1. CSS framework is a collection of CSS stylesheets that are prepped and ready to use. 
+
+	2. Bootstrap components are pre-styled UI elements like buttons, forms, navbars, and more, built with HTML, CSS, and JavaScript. 
+
+	
+
