@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Ivette Sanchez Homework 3 Fordham Mock Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--for navbar-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <link href=" https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/cerulean/bootstrap.min.css " rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <link href=" https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/cerulean/bootstrap.min.css " rel="stylesheet">
+
+        <!--for raleway font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+        
+        <style>
+
+            /*the font*/
+            .raleway-font{
+            font-family: "Raleway", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                /*box-sizing property allows us to include the padding and border in an element's total width and height*/
+                box-sizing: border-box;
+                font-family: "Raleway", serif;
+            }
+
+            .main-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+            }
+            
+            .majors-container {
+                border-right: 1px solid #e7ebe7;
+                padding: 50px;
+            }
+
+            .info-container {
+                padding: 50px;
+            }
+
+            h1 {
+                margin: 30px 0 30px;
+            }
+
+            .top-nav-bar {
+                margin-top: 50px;
+            }
+
+            .top-nav-bar a {
+                text-decoration: none;
+                color: black;
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            .majors-container .majors-minors {
+                color: #900028;
+                font-weight: bold;
+                width: 250px;
+                margin-top: 15px;
+            }
+
+            .question-section {
+                background-color: #e9e9e9;
+                list-style-type: none;
+                padding: 10px;
+                width: 250px;
+                margin: 30px 0;
+            }
+
+            .info-section {
+                margin-bottom: 20px;
+            }
+
+            .info-section p {
+                margin-bottom: 5px;
+            }
+
+            .quote-section p {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .para-section p {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+
+            button {
+                color: white;
+                background-color: #900028;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 25px;
+                border: none;
+                cursor: pointer;
+                width: 250px;
+            }
+
+            /*from bootstrap to make the accordian with information inside once you click*/
+            .accordion-button{
+                background-color: #900028 !important; /*putting !important so that it stops turning blue once clicking on the accordion*/
+                color: white !important;
+            }
+
+            .navbar{
+                background-color: white;
+                
+            }
+
+            .navbar-brand{
+                color: #900028;
+                font-size: 200%;
+            }
+
+            h1{
+                color:#900028;
+            }
+
+            h2{
+                color: #272626;
+            }
+
+            .nav-link{
+                margin: 0px 0px 0px 900px; /* pushing the little navigate button all the way to the right side of the bar*/
+                background-color: #900028;
+                color: white;
+                font-size: small; /* worked to make the button smaller*/
+            }
+
+            /*the second "title" that says Undergraduate Admission*/
+            .container-fluid2 {
+                width: 100%; 
+                background-color:#900028; 
+                padding: 20px; 
+            }
+
+            .navbar-title{
+                background-color: #900028;
+                color:white;
+                font-size: 50px;
+                text-decoration: none;
+            }
+
+            /*dropdown navbar sections --> the grey area in the real website with lots of drop down options*/
+            .dropdown-nav {
+                display:flex; /* makes it sit horizontally*/
+                background-color: #3b3a3a; 
+            }
+
+            /*styling the buttons */
+            .dropbtn {
+                display: flex;
+                color: white;
+                background-color: #3b3a3a;
+                font-size: 13px;
+                padding: 5px;
+                margin: 5px;
+                border: none; 
+            }
+
+            /*things inside the actual drop down buttons (not links but the background and how it appears)*/
+            .dropdown-content {
+                display: none; /*this is so that it doesnt display automatically--> must hover over */
+                position: absolute; /*looks better and displays the content to look more organized/better*/
+                background-color: #3b3a3a;
+            }       
+
+            /* links inside the actual dropdown */
+            .dropdown-content a {
+                color: white;
+                padding: 10px;
+                display: block; /*links all take up their own line*/
+            }
+            
+            /* Show dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .image-right {
+                float: right;  /* float image to right */
+                margin-left: 15px;  /* add some space between the image and the text */
+
+            }
+
+            .footer{
+                margin-top: 20px;
+            }
+
+            .footer-header{
+                font-size: 17px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+         <!--navbar from bootstrap inclass7 example-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="https://www.fordham.edu">FORDHAM UNIVERSITY</a> <!--I put the same link as the actual page maybe to make it go back to its original state-->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      NAVIGATE FORDHAM
+                    </a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+        
+          <!--large title bar-->
+            <div class="container-fluid2">
+              <a class="navbar-title" href="https://www.fordham.edu/undergraduate-admission/">Undergraduate Admission</a> <!--I put the link i get when clicking undergraduate admission on real page-->
+            </div>
+
+
+        <!--dropdown navbar and adding the right links according to real website-->
+        <div class="dropdown-nav">
+            <div class="dropdown">
+                <button class="dropbtn">Why Fordham</button>
+                <div class="dropdown-content">
+                    <a href="https://www.fordham.edu/undergraduate-admission/why-fordham/finding-your-academic-home-at-fordham/">Finding Your Academic Home at Fordham</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/why-fordham/finding-your-community-at-fordham/">Finding Your Community at Fordham</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/new-york-is-my-campus/">New York is My Campus</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/why-fordham/a-jesuit-education/">A Jesuit Education</a>
+                    <a href="https://www.fordham.edu/about/sustainability-at-fordham/">Sustainability at Fordham</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/why-fordham/admissions-and-diversity/">Admissions and Diversity</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/why-fordham/admission-facts/">Admission Facts</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/why-fordham/understanding-the-financial-aid-process-at-fordham/">Understanding the Financial Aid Process at Fordham</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Majors and Minors</button>
+                <div class="dropdown-content">
+                        <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/whats-your-passion/">Whats your Passion?</a>
+                        <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/accelerated-degree-programs/">Accelerated Degree Program</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Choose Your Campus</button>
+                <div class="dropdown-content">
+                    <a href="https://www.fordham.edu/undergraduate-admission/choose-your-campus/lincoln-center/">Lincoln Center</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/choose-your-campus/rose-hill/">Rose Hill</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Outcomes</button>
+                <div class="dropdown-content">
+                    <a href="https://www.fordham.edu/undergraduate-admission/outcomes/leading-industries-statistics/">Leading Industries Statistics </a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/outcomes/top-hiring-employers-statistics/">Top Hiring Employers Statistics</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/outcomes/public-service-statistics/">Public Service Statistics </a>
+                    <a href="https://www.fordham.edu/academics/undergraduate-education/fordham-internship-promise/">Fordham Internship Promise</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Visit</button>
+                <div class="dropdown-content">
+                    <a href="https://www.fordham.edu/undergraduate-admission/visit/on-campus-visit-options/">On Campus Visit Options</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/visit/on-campus-visit-options/#infoses">Information Session with Tour</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/visit/on-campus-visit-options/#guidedtours">Guided Tours</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/visit/virtual-visit-options/">Virtual Visit Options</a>
+                    <a href="https://www.youvisit.com/tour/59887">Virtual Tour</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/visit/group-tour-visit-options/">Group Tour Visit Options</a>
+                    <a href="https://admission.fordham.edu/portal/counselorvisit?_ga=2.138803955.1174798049.1739216085-1035500121.1739216085">Counselor Visit Options</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/visit/self-guided-walking-tours/">Self-Guided Walking Tours</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/virtual-ram-sessions-library/">Virtual Ram Sessions Library</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Apply</button>
+                <div class="dropdown-content">
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/how-to-apply/">How to Apply</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/dates-and-deadlines/">Dates and Deadlines</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/why-fordham/admission-facts/">Admission Facts</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/what-were-looking-for/">What Were Looking For</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/transfer-credits-apib/">Transfer Credits</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/covid-19-impact/">COVID-19 Impact</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/costs-and-the-return-on-your-investment/">Costs and Return on Your Investments</a>
+                    <a href="https://www.fordham.edu/undergraduate-financial-aid/how-to-apply/">Financial Aid</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/scholarships-and-grants/">Scholarships and Grants</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/summer-programs-for-hs-students/">Summer Programs for High Schoolers</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/virtual-ram-sessions-library/">Virtual Ram Sessions Library</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">International Students</button>
+                <div class="dropdown-content">
+                    <a href="https://www.fordham.edu/undergraduate-admission/international-students/international-transfer-students/">International Transfer Students</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/international-students/visiting-international-students/">Visiting International Students</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/international-students/international-faqs/">International FAQS</a>
+                    <a href="https://admission.fordham.edu/portal/globalevents?_ga=2.176623973.1174798049.1739216085-1035500121.1739216085">Global Visit Schedule</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/international-students/visa-process/">Visa Process</a>
+
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Transfer Students</button>
+                <div class="dropdown-content">
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/how-to-apply/transfer-students/">How to Apply</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/how-to-apply/transfer-students/transfer-credit-policies-and-procedures/">Transfer Credit</a>
+                    <a href="https://www.fordham.edu/admissions-and-aid/costs-and-financing-options/">Costs and Financing Options</a>
+                    <a href="https://www.fordham.edu/undergraduate-financial-aid/types-of-financial-aid/fordham-scholarships-and-grants/transfer-student-scholarships--grants/">Scholarships and Financial Aid</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/international-students/international-transfer-students/">International Transfer Students</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/apply/how-to-apply/visiting-student-admission/">Visiting Students</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Contact Us</button>
+                <div class="dropdown-content">
+                    <a href="https://admission.fordham.edu/register/admissioncounselors?_ga=2.83810646.1174798049.1739216085-1035500121.1739216085">Admission Counselors</a>
+                    <a href="https://admission.fordham.edu/register/mailinglist?_ga=2.83810646.1174798049.1739216085-1035500121.1739216085">Request Information</a>
+                    <a href="https://www.fordham.edu/families/i-am-a-parent-of/prospective-students/">Info for Prospective Families</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/contact-us/info-for-counselors/">Infor for Counselors</a>
+                    <a href="https://www.fordham.edu/veterans/">Info for Veterans</a>
+                    <a href="https://www.fordham.edu/undergraduate-admission/contact-us/chat-with-our-ambassadors/">Chat with Our Ambassadors</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--main container-->
+        <div class="main-container">
+            <div class="majors-container">
+                <h3 class="majors-minors">Majors and Minors</h3>
+                <ul class="question-section">
+                    <li>What's Your Passion?</li>
+                    <li>Accelerated Degree Programs</li>
+                </ul>
+                <button>Majors and Minors</button>
+            </div>
+            <div class="info-container">
+                <div class="top-nav-bar">
+                    <a href="https://www.fordham.edu/">Home</a> &#x2f;
+                    <a href="https://www.fordham.edu/admissions-and-aid/">Admissions and Aid</a> &#x2f;
+                    <a href="https://www.fordham.edu/undergraduate-admission/">Undergraduate Admission</a> &#x2f;
+                    <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/">Majors and Minors</a> &#x2f;
+                    <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/computer-science/" class="text-color">Computer Science</a>
+                </div>
+                <h1>Computer Science</h1>
+                <div class="info-section">
+                    <p>Degree Options: Major, Minor</p>
+                    <p>Locations: Lincoln Center, Rose Hill</p>
+                    <p>Visit the <a href="https://www.fordham.edu/academics/departments/computer-and-information-science/" class="text-color">Computer and Information Science Department</a></p>
+                </div>
+                <div class="quote-section">
+                    <p>Wherever there’s a computer, there’s a skilled person developing, maintaining, hacking, advancing, or simply using it. Be that person.</p>
+                </div>
+                <div class="para-section">
+                    <p>It’s difficult to imagine life without computers when they’re so central to our information-driven global society. But it’s not difficult to imagine the amazing pursuits you’ll be prepared for with a degree in computer science from Fordham’s department of Computer and Information Sciences.</p>
+                    <img src="https://www.fordham.edu/media/review/content-assets/migrated/images/iStock_000021097427Medium.jpg" alt="Description" class="image-right" width="200">
+                    <p>The computer science major emphasizes science and technology, including software design and programming, computer architecture and functions, and the development of an ability to analyze and solve problems using the computer as a tool.</p>
+                    <p>Get inspired by the classes we offer: Programming, Bioinformatics, Robotics, Video Game Design, Cyber Security, Networking, Database Management, Health and Medical Informatics.</p>
+                    <p>Our faculty members are active researchers driven by intellectual curiosity and the desire to make an impact. Join them in one of our labs. Requirements: open mind, warm heart, and lots of passion.</p>
+                    <p>You’ll learn more than computer science here. You’ll also study philosophy, theology, history, mathematics, languages, and the performing arts through Fordham’s common core curriculum, the centerpiece of our liberal arts education. We want you to excel in your field—and as a human being.</p>
+
+                </div>
+            <!--accordion from bootstrap-->
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Program Highlights
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>The department of Computer Information Systems is a dynamic and vibrant place, with a faculty of well-respected scholars who are equally committed to teaching and research.</p>
+
+                    <p> BS in computer science differs from the BA in that it requires classes in machine learning, knowledge discovery, and data mining.</p>
+                    
+                    <p>Special programs include:</p>
+                    
+                    Interdisciplinary degree in information systems through Fordham’s School of Professional and Continuing Studies (PCS)
+                    3-2 program for students studying engineering and computer science
+                    Five-year master’s degree
+                    Research Labs
+                    
+                    <p>Informatics and Data Mining Lab conducts research in the emerging fields of computational intelligence and informatics related to:</p>
+                    
+                    bioinformatics, brain informatics, cognitive informatics and neuroinformatics
+                    financial computing and informatics
+                    business analytics and business intelligence
+                    combinatorial fusion analysis
+                    
+                    <p>Robotics and Computer Vision Lab investigates the frontiers of robotics, including developing software to built robot systems for defense, visual homing systems inspired by ants and bees, and fusing data from a team of robots on a search-and-rescue mission.</p>
+                    
+                    <p>WISDM (Wireless Sensor Data Mining) Lab collects, mines and analyzes sensor data from smart phones and other mobile devices using activity recognition, biometric identification and trait recognition. The lab is supported by NSF funding and has received a Google Faculty Research Award.</p>
+                    
+                    <h2> Study Abroad</h2>
+                    
+                    <p>Study abroad enriches you academically, culturally and personally. There is a whole globe of study abroad possibilities available through Fordham’s International and Study Abroad Program.</p>
+                    
+                    <h2>Internships</h2>
+                    
+                    <p>We connect you to internships at leading organizations in the private and public sectors, including:</p>
+                    
+                    <ul>
+                        <li>IBM</li>
+                        <li>Philips</li>
+                        <li>Charney Research</li>
+                        <li> Key Digital</li>
+                        <li>Microsoft</li>
+                        <li>Consumer Financial Protection Bureau</li>
+                        <li>Oak Ridge National Laboratory</li>
+                        <li>MIT Lincoln Laboratory</li>
+                        <li>SiriusFM</li>
+                        <li>Fox News</li>
+                    </ul>
+                    <p>Fordham’s Career Services offers CareerLink, database of thousands of job and internship opportunities exclusively for Fordham students.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Sample Courses
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Discrete Structures 
+                        <li>Data Structures
+                        <li>Operating Systems
+                        <li>Theory of Computation
+                        <li>Data Communications and Networks
+                        <li>Intro to Video Game Design
+                        <li>Brains and Behaviors in Beasts and Bots
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Life After Fordham
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                <p>Wherever you find a computer system, you’ll find a person responsible for developing, maintaining, hacking, advancing or simply using it.</p>
+
+                <p>You graduate from our program prepared for a career or advanced study in computer science, information technology, system design, telecommunications, computer applications and much more.</p>
+                    
+                <p>We connect you with employers looking for:</p>
+                    <ul>
+                        <li>Software developers</li>
+                        <li>Programmers</li>
+                        <li>UX designers</li>
+                        <li>Data scientists</li>
+                        <li>Cybersecurity engineers</li>
+                        <li>Web designers</li>
+                    </ul>
+                    <p>Our career services tap Fordham’s ties with more than 2,600 companies. We offer:</p>
+                    
+                    <ul>
+                        <li>postgraduation career search</li>
+                        <li>resume development, Interviewing practice</li>
+                        <li>networking skill development</li>
+                        <li>hands-on case-study sessions with industry executives</li>
+                        <li>field-specific advising/coaching</li>
+                    </ul>
+                    <p>You also get access to our powerful (and Fordham-loyal) network of alumni, who want to see you succeed as they have. </p>               
+
+                    </div>
+              </div>
+            </div>
+
+            <div class="footer">
+                <h2 class="footer-header"> Learn More about the Computer Science Degree</h2>
+                <p>Visit the <a href="https://www.fordham.edu/academics/departments/computer-and-information-science/">Computer and Information Science Department</a> </p>
+            </div>
+        </div>
+        
+        </div>
+    </body>
+</html>
