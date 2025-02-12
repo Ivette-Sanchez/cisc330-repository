@@ -6,7 +6,7 @@ Ivette Sanchez-Perez
         - Flex box is a one dimensional layout system where you're going to create smaller layouts or simpler alignments than you would using 
         a CSS grid. 
         - CSS grid is a two dimensional layout system having more control for vertical/horizontal spaces. CSS grid should be used when you need 
-        more control over row/columns and you know your making a large-scale layout. 
+        more control over row/columns and if you know your making a large-scale layout. 
 
     2. What’s responsive design in web development and how do we implement it? 
         -Responsive design is when you create dynamic changes to the appearance of a website depending on the device's screen size/orientation being 
