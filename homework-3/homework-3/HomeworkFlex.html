@@ -1,0 +1,50 @@
+<!--3. Create a HTML file with a flex container and three flex items. 
+Give the flex items a color and width/height of 100px. 
+For screens <500px wide have the items flow vertically and >= 500px flow horizontally. -->
+
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Ivette Sanchez Homework 3 Flexbox</title>
+            
+            <style> 
+                .flexboxContainer{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+    
+                .flexItems
+                {
+                    width: 100px;
+                    height: 100px;
+                    background-color: rgb(68, 41, 82);
+                    color: rgb(222, 225, 231);
+                    margin: 25px;
+                }
+                @media screen and (min-width: 0px) {
+                    .flexboxContainer {
+                        flex-direction: column;
+                    }
+                }
+
+                @media screen and (min-width: 500px) {
+                    .flexboxContainer {
+                        flex-direction: row;
+                    }
+                }
+
+            </style>
+        
+        </head>
+    
+        <body>
+            <div class="flexboxContainer">
+                <div class="flexItems"> 1 </div>
+                <div class="flexItems"> 2 </div>
+                <div class="flexItems"> 3 </div>
+            </div>
+            
+        </body>
+    
+    </html>
