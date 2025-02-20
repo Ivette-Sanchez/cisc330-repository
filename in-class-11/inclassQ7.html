@@ -1,0 +1,44 @@
+<!--7. Create a webpage that (using jQuery) when a button 
+is clicked an HTTP GET request is sent to a PHP backend. 
+From the PHP backend return an associative array that is 
+JSON encoded. Console.log the response on the front end.-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ivette Sanchez-Perez In-class 11</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+
+        <button id="ajax-get">
+            Button
+        </button>
+
+        <div id="pets-container"></div>
+
+        <script>
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/pets', 
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+
+                        // Loop through the JSON response and append it to the page
+                        $.each(data, function (key, value) {
+                            console.log(data)
+                            $('#pets-container').append(`
+                              <div class="user">${key}: ${value}</div>
+                            `)
+                        })
+                    }
+                  
+                });
+            })
+        </script>
+    </body>
+</html>
+
