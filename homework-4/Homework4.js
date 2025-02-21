@@ -99,7 +99,6 @@ console.log(randomNumber, message);
 
 //using for in --> iterates object properties
 for(const property in cat) {
-    console.log(property) //logs the property name/key of the object
     console.log(cat[property]) //logs the value associated with that property
 }
 
