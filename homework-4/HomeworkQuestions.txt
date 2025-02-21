@@ -1,0 +1,37 @@
+CISC 3300 S25 
+Homework 4 
+Ivette Sanchez-Perez
+
+    1. How does an interpreted programming language differ from a compiled language? 
+        - In an interpreted programming language, the source code is not directly translated by the target machine→ a different program reads and executes the code. (EX: php, JS)
+            - Pros- is more flexible and offers more features like dynamic typing and smaller program size. Also, since interpreters execute the source program themselves=> code is platform-independent.
+            - Cons- slower execution speeds.
+
+        - In a Compiled language, once the program is compiled, it’s fully translated into machine code → is unreadable to humans.
+            - Pros- Programs are compiled into native machine code => faster to run.
+            - Con- More time is needed to complete the entire compilation step before testing.
+
+    2. Contrast dynamically typed programming languages with statically typed ones. And contrast strongly typed programming languages with weakly typed ones. 
+        - Dynamically typed languages does the type checking at runtime meaning that a variables type can change. 
+            - ^ In dynamically typed programming languages the type is bound to the value and is checked at runtime. 
+            - However statically typed languages does the type checking at compile-time meaning the variables type is bound to the variable and cant really change.
+
+        - In weakly typed languages → recognizes different data types like numbers/strings but doesn’t use them strictly (does not enforce strict type rules) → converts data when needed. 
+            - However, strongly typed languages enforces strict type discipline => type mismatches can lead to errors and conversions are usually not allowed/strict.
+
+    3. What is the difference between var, let, and const when declaring variables in JS? 
+        - Variables are containers for storing information and all three, var, let, and const, are keywords for variable declaration. 
+            - Var →.older keyword, global/function scoped, and can be redeclared.
+            - Let→ block-scoped and also re-declarable
+            - Const→ block scoped but not re-declarable.
+
+    4. What are anonymous functions? Higher order functions? Callback functions? First class functions? 
+        - Anonymous function→ a function without a name.
+        - Higher-order functions→ functions that returns a function/take other functions as arguments.
+        - Callback functions→ functions that are passed as arguments to other functions to be called later.
+        - First-class function→ if functions in that language are treated like other variables.
+
+    5. Define objects in JavaScript. 
+        - Object→ a collection of properties (key-value pairs). => properties consist of a key/name and a value. The value can be a function, and then the property is known as a method.
+        - Properties→ represent the characteristics of the object (EX: name, age)
+        - Methods→ represent the actions the object performs (EX: sayGreetings()).
