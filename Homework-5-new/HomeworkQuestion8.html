@@ -1,0 +1,62 @@
+<!--8. Create a webpage that contains an unordered list element which contains several list item elements.
+ If a list item is clicked, change the color of it. Each list item should have a different color. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ivette Sanchez Homework 5 Question 8</title>
+    <style>
+        #event-listener {
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="event-listener">
+        <ul>
+            <li id="item1"> List item 1 </li>
+            <li id="item2"> List item 2 </li>
+            <li id="item3"> List item 3 </li>
+            <li id="item4"> List item 4 </li>
+            <li id="item5"> List item 5 </li>
+        </ul>
+    </div>
+
+    <script>
+        // adding a click event listener
+        document.getElementById('item1').addEventListener('click', function (e) 
+        {
+            console.log(this.setAttribute('style','background-color:yellow')) //goes into style and changes background color-- repeat this for the other ones
+            console.log(e)
+        });
+
+        document.getElementById('item2').addEventListener('click', function (e) 
+        {
+            console.log(this.setAttribute('style','background-color:green')) 
+            console.log(e)
+        });
+
+        document.getElementById('item3').addEventListener('click', function (e) 
+        {
+            console.log(this.setAttribute('style','background-color:blue')) 
+            console.log(e)
+        });
+
+        document.getElementById('item4').addEventListener('click', function (e) 
+        {
+            console.log(this.setAttribute('style','background-color:black')) 
+            console.log(e)
+        });
+
+        document.getElementById('item5').addEventListener('click', function (e) 
+        {
+            console.log(this.setAttribute('style','background-color:purple')) 
+            console.log(e)
+        });
+    </script>
+</body>
+</html>

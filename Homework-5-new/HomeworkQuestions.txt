@@ -1,0 +1,71 @@
+CISC 3300 S25 
+Homework 5 
+Ivette Sanchez-Perez
+
+    1. What is the DOM? What is meant by the DOM tree? 
+        - DOM== Document Object Model, which is a programming interface for web documents that represents the page, makes it possible for programs to change the document structure/style/content.
+        - DOM TREE→ the hierarchical structure of elements →has four main types of nodes:
+            - document node == the page
+            - element nodes == individual elements
+            - attribute nodes == or attributes
+            - text nodes == or text
+
+    2. What is an XSS attack? How do they work? How can you guard against them?
+
+        - An XSS attack is also known as a Cross-Site Scripting attack, allowing attackers to gain access to your users accounts. 
+            - If a malicious person adds code to an input that is then generated as HTML → that code could possibly be run for different users. → can lead to stealing data, etc.
+            - How to guard: 
+                - careful with what content you treat as HTML.
+                - should very rarely even have the option to show input that came from a user at all
+                - if it must → options to validate that input == strip it of potential malicious intent by removing tags/escaping characters.
+
+    3. What is an event in JavaScript? What kind of events can you respond to with code? 
+        - EVENTS→ HTML events are "things" that happen to HTML elements --> interactions create events
+            - EVENT TYPES: 
+                - UI– load/unload/etc
+                - Keyboard– keydown, keyup, etc
+                - Mouse– click, mouseover, etc
+                - Focus– focus
+                - Form– submit, 
+
+    4. How does a DOM eventListener work? What are the parameters it is expecting? 
+        - Event listeners work by setting up a function that will be called whenever the specified event is delivered to the target → listen for the event by name.
+        - I think it’ll be expecting keywords like “click” or “submit” in order to tell it what type of event it will be.
+
+    5. What is jQuery? Why use it? How do we load jQuery onto a page? 
+        - jQuery is a JavaScript library that makes it easier to use JavaScript code on your website. 
+        - Instead of having a lot of common tasks and lines of JavaScript code jQuery takes these and wraps them into methods that you can call with a single line of code.
+            - Why should we use it→ simplifies code => easier to understand and increases developed productivity.
+            - ^ “makes our lives easier when doing common HTML/CSS/JS tasks”
+        - How to load it: in your HTML under <head> 
+            - ^ <script src=”https://code.jquesry.com/jquery-3.7.1.min.js”></script>
+ 
+    6. What is AJAX? JSON? The HTTP method types and what they do?
+        - AJAX- Asynchronous JavaScript And XML
+            - ^ Makes it possible for web pages to be updated by exchanging data with a web server in the background→ can update parts of a page without reloading/refreshing it.
+        - JSON- JavaScript object notation
+            - ^ a text-based data format following JavaScript object syntax that uses text that humans can read to store/transmit data objects consisting of attribute-value pairs and arrays.
+        - HTTP- stands for Hyper Text Transfer Protocol
+            - ^ how the internet handles communication between clients + servers→ done by requests and responses.
+        - HTTP Method types:  
+            - GET - should only ever retrieve data
+            - POST - submits an entity to the specified resource, often causing a change in state/side effects on the server.
+            - PUT - updates everything for a resource
+            - PATCH - partially modify a resource 
+            - DELETE - delete a resource
+
+    7. Write some data in the JSON format. You can use this site https://jsonformatter.org/ to check if it’s in the right format, making use of the “validate” button. 
+       
+        {
+            "name": "Orea",
+            "breed": "Chihuahua",
+            "age": "12 years old",
+            "home": {
+                "name": "Highbridge",
+                "state": "New York"
+            },
+            "owner": {
+		        "name": "Ivette Sanchez",
+	            age": "20 years old"
+            }
+        }

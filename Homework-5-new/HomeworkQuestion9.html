@@ -1,0 +1,75 @@
+<!--9. Create a webpage that contains a button. 
+Write jQuery code so that when the button is clicked an HTTP GET request is sent to a PHP backend. 
+From the PHP backend return a json encoded associative array of data pertaining to your fake business. 
+Make sure that it has at least a name and a price. 
+Use the response returned on the frontend to create a div element for each piece of data, 
+show the name and price of each item and give the elements some style. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ivette Sanchez-Perez Homework 5 Question 9</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+        <style>
+            body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #ajax-get { /*customizing the button*/
+                background-color:darkgrey;
+                padding: 10px;
+                margin: 10px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                
+            }
+            .cake-item { /*customizing the cake items--> the outputs retrieved from php*/
+                padding: 10px;
+                margin: 10px;
+                width: 150px;
+                border: 2px solid black;                
+                background-color: blanchedalmond;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+
+            }
+        </style>
+    </head>
+    <body>
+
+        <button id="ajax-get">
+            Cakes for Sale!
+        </button>
+
+        <div id="cake-container"></div>
+
+        <script>
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/cakeshop', 
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+
+                        // Loop through the JSON response and append it to the page
+                        $.each(data, function (key, value) {
+                            console.log(key);
+                            console.log(value);
+                            $('#cake-container').append(`
+                              <div class="cake-item"> <strong> Item: </strong>${value.name} </br> --> <strong> Price: </strong> ${value.price}</div>
+                            `)
+                        })
+                    }
+                  
+                });
+            })
+        </script>
+    </body>
+</html>
