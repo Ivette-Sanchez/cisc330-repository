@@ -16,7 +16,7 @@ Ivette Sanchez-Perez
         - Server-side scripting language
             -process user input and interact with other servers
 
-  3. What are some examples of how the PHP and JavaScript programming languages are alike and how they differ? 
+    3. What are some examples of how the PHP and JavaScript programming languages are alike and how they differ? 
         - Declaring variables: 
             - Differences:
                 - JS→ are declared using things like `var`, `let`, and `const`. 
