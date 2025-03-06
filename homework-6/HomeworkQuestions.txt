@@ -1,0 +1,51 @@
+CISC 3300 S25 
+Homework 6 
+Ivette Sanchez-Perez
+
+    1. Define hoisting and closures in JS. 
+        - Hoisting:
+            - ^Variables and functions within each execution context are created before they are executed → taking all the variables/functions and moving them to the top of the execution context.
+        
+        - Closure:
+            - ^Closures are the ability of a function to remember the variables and functions that are declared in its outer scope→ 
+
+    2. What is PHP? What do server-side languages do in web development? 
+        - PHP→ acronym for "PHP: Hypertext Preprocessor"
+            - interpreted programming language used to build webpages 
+        
+        - Server-side scripting language
+            -process user input and interact with other servers
+
+  3. What are some examples of how the PHP and JavaScript programming languages are alike and how they differ? 
+        - Declaring variables: 
+            - Differences:
+                - JS→ are declared using things like `var`, `let`, and `const`. 
+                - PHP→ are declared using a $ followed by variable name
+            - Similatiies→ both don’t need a type declaration.
+
+        - Conditionals:
+            - Both JS and PHP use if, if else, and else.
+
+        - Loops:
+            - Similatiies→ Both use for, while, and do while loops.
+            - Differences:
+                - JS→ iterating over object properties or array elements it uses → for...in/for...of loops.
+                - PHP→ can use a special foreach loop.
+
+
+    4. Why pick PHP over another server-side scripting language like Python or Node? 
+        - PHP has several useful built-in pieces of functionality
+        - When to Choose PHP? (https://www.geeksforgeeks.org/php-vs-python-vs-node-js/) 
+            - PHP is the proper selection for websites like blogs/web stores that need storage/management of content. 
+            - PHP supports excellent rapid application development→ a language that can easily be mixed with HTML ⇒ requires less configuration. 
+                - Learning Curve and User-Friendly
+                    - PHP has simpler syntax making it easier to learn for beginners. 
+                    - ^ is also easier to integrate HTML.
+            - It is inexpensive→ PHP is an open-source technology.
+            - PHP supports most general basic web application functionality.
+
+    5. Compare and contrast echo and var_dump. 
+        - echo→ used to output one or more expressions → prints values.
+        
+        - var_dump→ dumps information about one or more variables. The information holds type and value of the variables == can print out non-primitive values
+
