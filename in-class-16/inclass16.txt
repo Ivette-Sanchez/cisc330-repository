@@ -4,7 +4,7 @@ Ivette Sanchez-Perez
 
 1. a website can tell a browser to store data about the user and their visit in a text file called a cookie. 
 
-2. each time the browser requests another page from that domain, the browser sends the data in the cookie back to the ((server) (?) 
+2. each time the browser requests another page from that domain, the browser sends the data in the cookie back to the server
 
 3. browsers only send data in a cookie to a server when it is requesting data from the same domain that set it 
 
