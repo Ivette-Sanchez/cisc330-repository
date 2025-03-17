@@ -1,0 +1,50 @@
+CISC 3300 S25 
+Homework 7 
+Ivette Sanchez-Perez
+
+    1. What is a class? What is an object? What is OOP? 
+        - A class is the templates for creating objects → each time we create an object we set it up with properties.
+        - ^ An object is an instance of a class → a php variable for an object is a reference to the dynamic data consisting of the data we already set up with the class by using the ‘new’ keyword.
+        - OOP is when a class derives from another class→ inheritance.
+            -Inheritance= when a subclass inherits all the public/protected methods, properties, and constants from parent class.
+
+    2. Why use an abstract class in OOP? 
+        - Abstract class → a class thats not meant to be instantiated→ only extended by children classes 
+        - Abstract classes/methods → usually used when a class provides some high-level functionality but leaves out some details to be implemented by derived classes.
+            - ^allow the parent to create defaults for methods
+
+    3. What are superglobals in PHP, what are some examples of data they provide? 
+        - Several predefined variables in PHP are "superglobals", which means they are available in all scopes throughout a script. There is no need to do global $variable; to access them within functions or methods. 
+        - Superglobal arrays:
+            - The $_SERVER superglobal array is an example of one of the superglobal arrays that the PHP interpreter creates each time a page is requested. Each superglobal array has data that the page’s PHP code can use.
+            - $_SERVER["REQUEST_URI"] will give us our URI: localhosts:3000/posts -> /posts 
+                - remember the URI is the resource, doesn’t include the domain 
+            - $_SERVER['REQUEST_METHOD'] will give us our request method
+
+    4. What are the two steps to setting up and using a class via namespaces?
+        - Step 1: Define a namespace it in the class to be used. 
+        - Step 2: In the place we want to use the class we have two options:
+            - 1- typing out the full namespace everytime we want to use that class
+            - 2- import the class into the current namespace with use keyword
+
+    5. What is MVC? Detail the different parts. 
+        - ^ architectural/design pattern that separates an application into 3 main logical components→ Model, View, and Controller
+            - Each part is built to handle specific development aspects of an application.
+        - Model Layer:
+            - ^ corresponds to all the data-related logic that the user works with. 
+            - Represents either the data that is being transferred between the View and Controller components or any other business logic-related data. 
+                - can add/retrieve data from the database → responds to the controller’s request because the controller can’t interact with the database by itself== the model interacts with the database and gives the required data back to the controller.
+        - Controller:
+            - the component that allows the interconnection between the views and the model → acts as an intermediary. 
+            - tells the model what to do→ processes all the business logic/incoming requests == manipulates data using the Model component, and interact with the View to render the final output.
+        - VIEW:
+            - used for all the UI logic of the application → generates a user interface for the user. 
+            - ^ are created by the data which is collected by the model component but these data aren’t taken directly but through the controller 
+                -only interacts with the controller.
+
+    6. If I had a resource called users in my application that was designed with RESTFUL URI design, what would the URI and HTTP verbs be for: 
+        - a. getting all users → GET /users
+        - b. getting one users  → GET /users/ (id)
+        - c. saving a user → POST /users
+        - d. editing a user →PUT /users/(id)
+        - e. deleting a user →DELETE /users/ (id)
