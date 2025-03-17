@@ -1,0 +1,55 @@
+
+.container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center; 
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda; /* green background for success */
+    color: #155724; /* dark green text for success */
+}
+
+.message.error {
+    background-color: #f8d7da; /* red background for errors */
+    color: #721c24; /* dark red text for errors */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* stack form elements vertically */
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #bebaba;
+    width: 100%;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #ec9e3f; 
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a9601b; 
+}
