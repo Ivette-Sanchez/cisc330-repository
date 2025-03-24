@@ -1,0 +1,13 @@
+CISC 3300 SP25 
+In class assignment 18 
+Ivette Sanchez-Perez
+
+    1. SQL Relationships are the established associations between two or more tables. 
+
+    2. For every record in the primary table, there are one or more related records in the foreign table: One to many 
+
+    3. The join keyword allows you to request data from more than one table 
+
+    4. The LEFT JOIN returns all records from the left table (table1), and the matching records from the right table 
+
+    5. An Aggregate function is a function that performs a calculation on a set of values, and returns a single value. 
