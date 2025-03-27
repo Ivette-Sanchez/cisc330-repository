@@ -9,7 +9,7 @@ class Post extends Model {
             $query = "select * from posts where title like :title";
             return $this->fetchAllWithParams($query, ['title' => '%' . $title . '%']);
         }
-        $query = "SELECT * FROM posts";
+        $query = "select * from posts";
         return $this->fetchAll($query);
     }
 
