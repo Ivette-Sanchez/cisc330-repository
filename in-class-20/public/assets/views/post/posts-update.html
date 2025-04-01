@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Posts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/assets/styles/posts-view.css">
+    </head>
+    <body>
+        <div class="background">
+        <div class="container posts-form margin-thirty">
+            <a href="http://localhost:8888/" class="linkHome">Home</a>
+            <div class="title">
+            <h2 class="margin-thirty">Edit Post</h2>
+            </div>
+            <form id="form-id">
+                <div class="form-group margin-twenty">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name"
+                           placeholder="enter full name">
+                </div>
+                <div class="form-group margin-ten">
+                    <label for="firstPost">First Post</label>
+                    <input type="text" class="form-control" id="firstPost"
+                           placeholder="enter first post">
+                </div>
+
+                <div class="form-group margin-ten">
+                    <label for="email" id="email-label">Email</label>
+                    <input type="text" class="form-control" id="email"
+                           placeholder="Enter Email">
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-button margin-twenty">Submit</button>
+            </form>
+
+            <div id="error-container" class="margin-ten"></div>
+        </div>
+        </div>
+
+        <script>
+
+            $(document).ready(function () {
+                const urlArry = window.location.pathname.split("/")
+                const id = urlArry[2]
+                $.ajax({
+                    url: `http://localhost:8888/api/posts/${id}`,
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        const post = data[0]
+                        $('#name').val(post.name)
+                        $('#firstPost').val(post.firstPost)
+                        $('#email').val(post.email)
+
+                    }
+                });
+
+                $('#form-id').on('submit', function (e) {
+                    const urlArry = window.location.pathname.split("/")
+                    const id = urlArry[2]
+                    e.preventDefault();
+                    const name = $('#name').val();
+                    const firstPost = $('#firstPost').val();
+                    const email = $('#email').val();
+
+                    const data = {
+                        name,
+                        firstPost,
+                        email,
+                    }
+                    $.ajax({
+                        url: `http://localhost:8888/api/posts/${id}`,
+                        type: "PUT",
+                        data: data,
+                        dataType: "json",
+                        success: function (data) {
+                            console.log("here");
+                            window.location.replace("http://localhost:8888/");
+                        },
+                        error: function (data){
+                            $('#error-container').html('')
+                            for (const property in data.responseJSON) {
+                                $('#error-container').append(` <div class='error-text'>${data.responseJSON[property]}</div>`)
+                            }
+                        }
+                    });
+                })
+
+            })
+
+
+        </script>
+
+    </body>
+</html>

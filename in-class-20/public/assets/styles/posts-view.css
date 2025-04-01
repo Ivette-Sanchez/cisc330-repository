@@ -1,0 +1,118 @@
+.posts-form {
+    max-width: 600px;
+}
+
+.post-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post {
+    font-weight: 500;
+}
+
+.error-border {
+    border: 2px solid red;
+}
+.error-text {
+    color: red;
+    font-weight: 300;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+#delete-post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete-button {
+    max-width: 200px;
+    cursor: pointer;
+}
+
+#posts-data {
+    display: block;
+}
+
+.margin-twenty {
+    margin-top: 20px;
+}
+
+.margin-thirty {
+    margin-top: 30px;
+}
+
+.margin-ten {
+    margin-top: 10px;
+}
+
+.background {
+    display: flex;
+    flex-direction: column; 
+	background-color: #e3cce1;
+	color: #000000;
+	margin-top: 50px;
+	padding: 20px;
+	font-size: 25px;
+	width: 60%;
+	border-radius: 10px; /* rounded corners for the content square */
+    margin: 0 auto; /* centers */
+    margin-top: 30px;
+    border: 4px solid rgb(106, 64, 107); 
+
+}
+
+.title {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+	background-color: #b088a7;
+	color: #f1f1f1;
+	padding: 20px;
+	font-size: 40px;
+	width: 60%;
+	border-radius: 10px; /* rounded corners */
+    margin: 0 auto; /* centering it */
+    border: 4px solid rgb(106, 64, 107); 
+
+}
+
+
+.linkHome {
+    background-color: #3498db; 
+    color: white;
+    font-size: 18px; 
+    padding: 12px 20px; /* bigger padding for bigger button */
+    border: none;
+    border-radius: 8px; /* rounded corners */
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkHome:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.deleteWarning {
+    display: flex;
+    flex-direction: column; 
+	background-color: #ee503f;
+	color: #000000;
+	margin-top: 50px;
+	padding: 20px;
+	font-size: 25px;
+	width: 80%;
+	border-radius: 10px; /* rounded corners for the content square */
+    margin: 0 auto; /* centers */
+    border: 4px solid rgb(106, 64, 107);
+
+}
