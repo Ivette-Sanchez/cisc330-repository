@@ -1,0 +1,36 @@
+CISC 3300 S25 
+Homework 9 
+Ivette Sanchez-Perez
+
+1. What are relationships in SQL? Joins? 
+    - Relationships→ the associations between two or more tables.
+        - ^involves primary/foreign keys → join keyword 
+    - Joins allows you to request data from more than one table
+        - Different types of joins:
+            - select * from teachers join classes on teachers.id = classes.teacherID;
+                - To denote the relationship between the primary key of the first table and the foreign key of the second table
+        - joins are how we implement relationships 
+
+2. How do joins and relationships interact? 
+    - When using joins you can specifically school what type of data should be returned.
+        - Left join: return all data from left table and the matching records from right table.
+        - Inner join: returns records that have matching values in both tables.
+
+3. What’s a PDO? a DSN? 
+    - Pdo→ a built in class that comes packaged with PHP to make it very easy for you to interact with databases.
+        - represents/manages connection to database.
+        - through PDOs PHP → going to take sql as input ⇒ return results from the database and store it in a variables
+    - DSN (Data Source Name) → instantiate PDOs with DSN string which represent the connection to our database
+        - DSN ⇒ a string that contains information about our connection to the database
+        - ^ this information contains passwords, these should come from an .env file.
+
+4. What are prepared statements? Why do we need them? 
+    - Prepared statement→ a parameterized/reusable SQL query that forces the developer to write the SQL command and the user-provided data separately. 
+        - ^ The SQL command is executed safely, preventing SQL Injection vulnerabilities.
+    - Why? → Its how we can guard against hacks
+        - we should always used prepared statements with parameters being run in sql, otherwise we are susceptible to injection attacks.
+
+5. What does an .env file do? 
+    - .env file → a file containing environment variables
+        - An environment variable is a variable whose value is set outside the program, typically through a functionality built into the operating system.
+        - A gitignore file is a text file that tells Git which files/folders to ignore in a project, we will need git to ignore our .env file 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Artpieces</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+        <style>
+            .margin-thirty{
+                display: flex;
+                flex-direction: column; /* Stack image and text vertically */
+                justify-content: center; /* Center content horizontally */
+                align-items: center; /* Center content vertically */  
+                background-color: #7ca5bc;
+	            color: #f1f1f1;
+	            margin-top: 30px;
+	            padding: 20px;
+	            font-size: 40px;
+	            width: 60%;
+	            border-radius: 10px; /* Rounded corners for the content square */
+            }
+            .container {
+                display: flex;
+                flex-direction: column; 
+                justify-content: center; 
+                align-items: center; 
+                background-color: #add6ed;
+	            color: #121010;
+	            margin-top: 30px;
+	            padding: 20px;
+	            font-size: 30px;
+	            width: 60%;
+	            border-radius: 10px; /* Rounded corners for the content square */
+
+            }
+
+            .back-button {
+                background-color: #3498db; 
+                color: white;
+                font-size: 18px; 
+                padding: 12px 20px; /* bigger padding for bigger button */
+                border: none;
+                border-radius: 8px; /* rounded corners */
+                cursor: pointer;
+            }
+
+            .back-button:hover {
+                background-color: #2980b9; /* Darker blue on hover */
+            }
+            
+
+            
+        </style>
+    </head>
+    <body>
+      
+        <div class="container">
+        </div>
+        <button class="back-button" onclick="goBackToPage()">← Back to Gallery</button> <!--creating a button to go back to the users html instead of going back in browser -->
+
+        <script>
+            function goBackToPage() { 
+                window.location.href = "/artpieces"; 
+            }
+
+            $(document).ready(function () {
+                console.log(window.location.pathname)
+                const urlArray = window.location.pathname.split("/")
+                console.log(urlArray)
+                const id = urlArray[2]
+                $.ajax({
+                    url: `http://localhost:8888/api/artpieces/${id}`,
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data) {
+                            $('.container').append(`
+                                <h2 class="margin-thirty">Painting Details:</h2>
+                                    <b> Title: </b> ${data?.title}
+                                <div>
+                                    <b> Description: </b> ${data?.description}
+                                </div>
+                                <div>
+                                    <img src="${data.image_url}" alt="Artwork Image" class="img-fluid mt-3">
+                                </div>
+                            `); //^for the image to pop up
+                        } else {
+                            $('.container').append(`
+                                <h2 class="margin-thirty">Artpiece Not Found</h2>
+                            `);
+                        }
+                    }
+                });
+            })
+        </script>
+    
+    </body>
+</html>
+
+                           
+                       
